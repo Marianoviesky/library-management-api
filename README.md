@@ -31,7 +31,7 @@ This API was built utilizing advanced Laravel concepts:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Mariano/library-api.git
+   git clone https://github.com/Mariano/library-management-api.git
    cd library-api
    ```
 
@@ -64,13 +64,13 @@ This API was built utilizing advanced Laravel concepts:
 
 All endpoints are prefixed with `/api/v1/`. All requests (except Auth) require a Bearer Token in the `Authorization` header.
 
-### 🔐 Authentication (Public)
+### Authentication (Public)
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | POST | `/auth/register` | Register a new user and receive an API token |
 | POST | `/auth/login` | Login and receive an API token |
 
-### 📖 Books
+### Books
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | `/books` | List books (Supports filters: `?available=1`, `?author_id=x`, `?category_id=x`) |
@@ -79,12 +79,12 @@ All endpoints are prefixed with `/api/v1/`. All requests (except Auth) require a
 | PUT/PATCH| `/books/{id}` | Update a book |
 | DELETE | `/books/{id}` | Delete a book (Soft Delete) |
 
-### ✍️ Authors & 🏷️ Categories
+### Authors & Categories
 *Both follow standard CRUD operations similar to Books.*
 - `/authors`
 - `/categories`
 
-### 🔄 Borrowings (Business Logic)
+### Borrowings (Business Logic)
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | `/borrowings` | List borrowings (Filters: `?active=1`, `?user_id=x`) |
@@ -93,14 +93,14 @@ All endpoints are prefixed with `/api/v1/`. All requests (except Auth) require a
 
 ---
 
-## 🧪 Testing
+## Testing
 
 To run the automated test suite (Unit & Feature tests):
 ```bash
 php artisan test
 ```
 
-## 📊 Artisan Commands
+## Artisan Commands
 
 To view quick library statistics via the terminal:
 ```bash
